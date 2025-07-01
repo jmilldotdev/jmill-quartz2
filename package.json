@@ -17,7 +17,10 @@
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "test": "tsx --test",
-    "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1"
+    "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
+    "content": "tsx ./scripts/content.ts",
+    "serve": "pnpm content && npx quartz build --serve",
+    "sync": "npx quartz sync"
   },
   "engines": {
     "npm": ">=10.9.2",
@@ -109,7 +112,7 @@
     "@types/yargs": "^17.0.33",
     "esbuild": "^0.25.5",
     "prettier": "^3.5.3",
-    "tsx": "^4.19.4",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   }
 }
